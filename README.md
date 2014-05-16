@@ -1,5 +1,6 @@
-lesfruitsdefendus
-=================
+Les fruits défendus
+===================
+http://lesfruitsdefendus.org
 
 Code pour Les fruits défendus Montréal
 
