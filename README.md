@@ -8,3 +8,12 @@ PHP Redmine API:
 
 Insert PHP Wordpress Plugin:
 * http://wordpress.org/plugins/insert-php/
+
+
+Getting Redmine data in Wordpress:
+
+    [insert_php]
+    include '/home/tiago/vendor/autoload.php';
+    $client = new Redmine\Client('https://redmine.acaia.ca', 'xxxxxxxxxxxxxxxxxxxxxxx');
+    foreach($client->api('project')->all() as $p) print_r ($p);
+    [/insert_php]
