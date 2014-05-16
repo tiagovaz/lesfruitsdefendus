@@ -1,15 +1,14 @@
 Les fruits défendus
 ===================
-http://lesfruitsdefendus.org
 
 Code pour Les fruits défendus Montréal
+(http://lesfruitsdefendus.org)
 
 PHP Redmine API:
 * https://github.com/kbsali/php-redmine-api
 
 Insert PHP Wordpress Plugin:
 * http://wordpress.org/plugins/insert-php/
-
 
 Getting Redmine data in Wordpress:
 
@@ -18,3 +17,8 @@ Getting Redmine data in Wordpress:
     $client = new Redmine\Client('https://redmine.acaia.ca', 'xxxxxxxxxxxxxxxxxxxxxxx');
     foreach($client->api('project')->all() as $p) print_r ($p);
     [/insert_php]
+
+Event Calendar plugin for Wordpress:
+* http://wordpress.org/plugins/amr-ical-events-list/
+
+
