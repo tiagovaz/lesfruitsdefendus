@@ -41,7 +41,7 @@ get_header(); ?>
 					?>
 					<div id="iso-content">
 						<?php /* The loop */ ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 						<div class="item normal element <?php foreach(get_the_category() as $category) {
 						echo $category->slug . ' ';} ?>">
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -64,7 +64,6 @@ get_header(); ?>
 						</div>
 						<?php endwhile; ?>
 					</div>
-					<?php twentythirteen_paging_nav(); ?>
 				</div><!-- #content -->
 	</div><!-- #primary -->
 
