@@ -31,32 +31,8 @@ get_header(); ?>
 				</article><!-- #post -->
 				
 				<?php endwhile; ?>
-				<?php 
-				$nouvelles = new WP_Query(array(
-				    'page_id' => 155,
-				    'posts_per_page' => 6,
-				));
-				?>
-				<?php while ( $nouvelles->have_posts() ) : $nouvelles->the_post(); ?>
-				
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
+	
 
-						<h1 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<?php the_excerpt(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post -->
-				
-				<?php endwhile; ?>
 				
 				<?php 
 				$participer = new WP_Query(array(
@@ -77,33 +53,7 @@ get_header(); ?>
 				</article><!-- #post -->
 				
 				<?php endwhile; ?>
-				<?php ?>
-				<?php 
-				$agenda = new WP_Query(array(
-				    'page_id' => 147,
-				    'posts_per_page' => 6,
-				));
-				?>
-				<?php while ( $agenda->have_posts() ) : $agenda->the_post(); ?>
 				
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
-						<h1 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post -->
-				
-				<?php endwhile; ?>
-				<?php ?>
 
 				<?php
 			 	$terms = get_terms("category", array(
@@ -132,13 +82,8 @@ get_header(); ?>
 					<div id="iso-content">
 						<?php /* The loop */ ?>
 						<?php 
-						$args = array(
-						'tax_query' => array(
-								array( 'taxonomy' => 'post_format',
-									  'field' => 'slug',
-									  'terms' => array('post-format-video','post-format-gallery'),
-									  )
-								)
+						$args = array('post_type' => 'post','showposts' => 4, 
+					
 						);
 						$loop = new WP_Query( $args ); 
 						?>
@@ -156,7 +101,7 @@ get_header(); ?>
 								</header><!-- .entry-header -->
 
 								<div class="entry-content">
-									<?php the_excerpt(); ?>
+								
 								</div><!-- .entry-content -->
 								<footer class="entry-meta">
 									
@@ -169,5 +114,9 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
+
+<script>
+jQuery('body').removeClass('sidebar');
+</script>

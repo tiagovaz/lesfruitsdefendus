@@ -17,21 +17,55 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+		<?php
+			 	$terms = get_terms("category", array(
+				 	'orderby'    => 'count',
+				 	'hide_empty' => 0,
+				 	'parent'	 => 0,
+				 ));
+			 	$count = count($terms); ?>
+			 	
+				<div id="content" class="site-content" role="main">
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+					<ul id="filters">
+				 	<a href="#" data-filter="*" class="active">Show all |</a>
+				 	<?php
+				 	if ( $count > 0 ){
+				    foreach ( $terms as $term ) {
+				    $category_name = $term->name;
+				    $category = $term->slug;
+				    echo '<a href="#" data-filter=".'. $category .'">'. $category_name .' | </a>';   
+				    }
+				    echo "</ul>";
+					}
+					?>
+					<div id="iso-content">
+						<?php /* The loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+						<div class="item normal element <?php foreach(get_the_category() as $category) {
+						echo $category->slug . ' ';} ?>">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<header class="entry-header">
+									<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+									<div class="entry-thumbnail">
+										<?php the_post_thumbnail(); ?>
+									</div>
+									<?php endif; ?>
+									<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>
+								</header><!-- .entry-header -->
 
-			<?php twentythirteen_paging_nav(); ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
+								<div class="entry-content">
+									
+								</div><!-- .entry-content -->
+								<footer class="entry-meta">
+									
+								</footer><!-- .entry-meta -->
+							</article><!-- #post -->
+						</div>
+						<?php endwhile; ?>
+					</div>
+					<?php twentythirteen_paging_nav(); ?>
+				</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

@@ -17,7 +17,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .site {
 	z-index: 9999;
 	position: relative;
-	background-color: rgba(255, 255, 255, 0.3)
+	background-image: url(../images/bg.png);
+	background-repeat:repeat;
+	background-color: none;
 }
 
 #page {
@@ -28,13 +30,41 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	color: #000;
 }
 
-.home .entry-content a:hover {
-	color: #bc360a;
+a:hover {
+	color: #c52129 !important;
 }
 
 .background-image {
      
 }
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////
+/// NAVIGATION /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////*/
+
+.nav-menu li a {
+	font-size: 17px;
+	color: #141412 !important;
+}
+
+.sub-menu {
+	margin: 2px;
+}
+
+.nav-menu li:hover > a, .nav-menu li a:hover,.nav-menu .sub-menu li:hover {
+	background-color: #fff !important;
+}
+
+
+.nav-menu .sub-menu, .nav-menu .children {
+background-color: rgba(224, 216, 172, 0.95);
+border: 0px;
+-moz-box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
+-webkit-box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
+box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
+}
+
 
 #supersized {
 	position: fixed;
@@ -47,28 +77,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #masthead {
-	margin-top: 5px;
+	margin-top: 0;
 }
 
 .header-background {
-	background-color: white !important;
+	background-color: transparent;
 
 }
 
 .logo-header {
-	background: url(http://localhost/lesfruitsdefendus/wp-content/themes/lesfruitsdefendus/images/headers/circle.png) no-repeat scroll top;
-	background-color: white !important;
+	background: url(../images/headers/circle.png) no-repeat scroll top;
+	background-color: transparent;
 	min-height: 200px;
 	float: none;
 	zoom: 1;
-	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
 	.logo-header {
-		background: url(http://localhost/lesfruitsdefendus/wp-content/themes/lesfruitsdefendus/images/headers/circle_logo.png) no-repeat scroll top;
+		background: url(../images/headers/circle_logo.png) no-repeat scroll top;
 		min-height: 150px;
+		padding-top: 20px;
 	}
 
 	.main-navigation {
@@ -83,6 +113,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .menu-menu-1-container {
 	text-align: center;
 }
+
+
+
+.widget-area .widget {
+	background-color: rgba(247, 245, 231, 0.95);
+	border-left: 5px solid #FFF;
+}
+
 
 #post-196 .entry-content {
 	padding-left: 0;
@@ -101,10 +139,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .navbar {
 	max-width: none;
-	background-color: #E0D8AC;
-	-moz-box-shadow:    0px 0px 0px 0px #313131;
-	-webkit-box-shadow: 0px 0px 0px 0px #313131;
-	box-shadow:         0px 0px 0px 0px #313131;
+	background-color: rgba(224, 216, 172, 0.9);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(51, 51, 51, 0.5);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.5);
+	box-shadow:         0px 0px 10px 0px rgba(51, 51, 51, 0.5);
 }
 
 .site-footer .sidebar-container {
@@ -114,7 +152,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .site-info {
 	margin: 0 auto;
 	max-width: none; 
-	padding: 30px 0;
+	padding: 10px 0;
 	/* width: 100%; */
 	background: #fff;
 }
@@ -258,8 +296,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .item, .isotope.hentry, .isotope.entry-content,.isotope-item, .isotope article {
 	width: 285px;
 	height: 285px;
-	padding: 5px;
-	margin: 5px;
+	padding: 0;
+	margin: 0;
 }
 
 .isotope article {
@@ -299,9 +337,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding-top: 0px;
 }
 
+
+.format-gallery {
+background-color: rgba(224, 216, 172, 0.75);
+}
+
+.format-video {
+background-color: rgba(197, 33, 41, 0.75);
+}
+
+.site-main .widget-area {
+margin-right: -200px;
+margin-top: 20px;
+}
+
 #filters {
-	margin-bottom: 10px !important;
-	margin-top: 20px !important;
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
 	background-color: #fff;
 	font-size: 14px;
 	padding: 10px;
@@ -320,6 +372,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	transition: all .25s ease-in-out;
 	-moz-transition: all .25s ease-in-out;
 	-webkit-transition: all .25s ease-in-out;
+	-moz-box-shadow:    0px 0px 10px 0px rgba(51, 51, 51, 0.5);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.5);
+	box-shadow:         0px 0px 10px 0px rgba(51, 51, 51, 0.5);
 }
 
 .home #content {

@@ -36,13 +36,32 @@ get_header(); ?>
 					endif;
 				?></h1>
 			</header><!-- .archive-header -->
-
+			<div id="iso-content">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<div class="item normal element <?php foreach(get_the_category() as $category) {
+						echo $category->slug . ' ';} ?>">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<header class="entry-header">
+									<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+									<div class="entry-thumbnail">
+										<?php the_post_thumbnail(); ?>
+									</div>
+									<?php endif; ?>
+									<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>
+								</header><!-- .entry-header -->
+
+								<div class="entry-content">
+									
+								</div><!-- .entry-content -->
+								<footer class="entry-meta">
+									
+								</footer><!-- .entry-meta -->
+							</article><!-- #post -->
+						</div>
 			<?php endwhile; ?>
 
-			<?php twentythirteen_paging_nav(); ?>
+			</div>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
