@@ -10,7 +10,6 @@ PHP Redmine API:
 Insert PHP Wordpress Plugin:
 * http://wordpress.org/plugins/insert-php/
 
-
 Getting Redmine data in Wordpress:
 
     [insert_php]
