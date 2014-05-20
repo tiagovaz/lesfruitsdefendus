@@ -768,3 +768,5 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 register_new_royalslider_files(2);
+
+add_theme_support('post-thumbnails');

@@ -126,12 +126,39 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 	padding-left: 0;
 	padding-right: 0;
 	max-width: none;
+	background: #fff;
 }
 
 #post-196 {
 	margin: 0;
 	padding: 0;
 }
+
+.counter {
+	float: right;
+	text-align: center;
+	padding: 5px;
+	width: 30%;
+	padding-top: 5%;
+}
+
+.counter h1, .counter h2 {
+	margin: 10px;
+}
+
+@media (max-width: 800px) {
+	.counter img {
+		width: 40px;
+		height: auto;
+	}
+	.counter h1 {
+		font-size: 16px;
+	}
+	.counter h2 {
+		font-size: 12px;
+	}
+}
+
 
 #post-196 .rsUni .rsBullets {
 	display: none;
@@ -157,6 +184,11 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 	background: #fff;
 }
 
+.archive-title, .archive-meta {
+padding: 10px 0;
+padding-left: 20px;
+}
+
 #tribe-events-pg-template, .site-content {
 	background: rgba(236, 240, 228, .7);
 }
@@ -175,8 +207,8 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 }
 
 .home .item, .isotope.hentry, .home .isotope.entry-content, .home .isotope-item, .home .isotope article  {
-	width: 250px;
-	height: 250px;
+	width: 280px;
+	height: 150px;
 }
 
 .home #iso-content .entry-header {
@@ -202,6 +234,30 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 #pg-139-0 .panel-grid-cell {
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+#iso-content .entry-header {
+	background-color: rgba(255, 255, 255, 0.9);
+	width:100%;
+	
+}
+
+#iso-content .entry-header {
+	padding: 0 0 0 0;
+	border-left: 3px solid #c52129 !important;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+	 .isotope article {
+	width: 319px !important;
+	}
+}
+
+.sidebar .site-footer {
+	text-align: center;
 }
 
 .panel-grid-cell .widget {
@@ -251,6 +307,7 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
       -ms-transition-duration: 0.5s;
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
+
 }
 
 .isotope {
@@ -286,18 +343,31 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 	overflow: inherit !important;
 }
 
+.archive  #iso-content {
+	min-height: 700px;
+}
+
  a#inifiniteLoader {  
     position: fixed;    
     z-index: 2;     
     display:none;  
 } 
 
+.thumbnailblur {
+	position:absolute;
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: blur(0px);
+}
+
 
 .item, .isotope.hentry, .isotope.entry-content,.isotope-item, .isotope article {
-	width: 285px;
-	height: 285px;
-	padding: 0;
-	margin: 0;
+	width: 320px;
+height: 150px;
+padding: 0px;
+margin: 1px 0 1px 0;
 }
 
 .isotope article {
@@ -329,7 +399,7 @@ box-shadow: 0px 10px 10px -5px rgba(51, 51, 51, 0.5);
 
 
 .item .entry-title {
-	font-size: 2em;
+	font-size: 1.2em;
 	text-align: left;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -347,7 +417,7 @@ background-color: rgba(197, 33, 41, 0.75);
 }
 
 .site-main .widget-area {
-margin-right: -200px;
+margin-right: 0px;
 margin-top: 20px;
 }
 
