@@ -22,4 +22,5 @@ Event Calendar plugin for Wordpress:
 * http://wordpress.org/plugins/amr-ical-events-list/
 
 ICS Calendar export for Redmine:
-* https://github.com/thegcat/redmine_ical
+* https://github.com/thegcat/redmine_ical (using a modified version, 'forked' here.)
+
