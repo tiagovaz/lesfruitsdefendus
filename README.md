@@ -21,4 +21,6 @@ Getting Redmine data in Wordpress:
 Event Calendar plugin for Wordpress:
 * http://wordpress.org/plugins/amr-ical-events-list/
 
+ICS Calendar export for Redmine:
+* https://github.com/thegcat/redmine_ical
 
