@@ -1,0 +1,13 @@
+GEM
+  remote: http://rubygems.org/
+  remote: http://rubygems.org/
+  specs:
+    icalendar (1.1.6)
+    vpim (0.695)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  icalendar
+  vpim (= 0.695)
